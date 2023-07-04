@@ -1,0 +1,28 @@
+WebSocket: 
+Bidirectional, Full duplex  protocol for communication between server and client over the web.
+Standardized in 2011. Fully compactible with HTTP
+Websocket is build on HTTP 1.1 as HTTP 1.1 has persistent TCP connection.
+Websocket is stateful(awareness) protocol as both client and server are aware of each others.
+
+WebSocket Handshake WS:?/ or WSS://:
+The first request is HTTP GET Request with HTTP 1.1 with UPGRADE header.
+
+WebSocket Usecase's: Chatting, Live Feed/Notification, Multiplayer gaming, Showing client process/loading
+
+
+WebSockets Pros and Cons  
+
+Pros
+1. Full-duplex no need for constant polling  
+2. compatible with HTTP, so proxies know to deal with it
+3. Firewalls won’t block it doesn’t use a special port
+Cons
+1. Proxying is tricky, lots of proxies and transparent proxies don’t support it yet
+2. Layer 7 load balancing is tricky, timeouts on the load balancer. 
+3. More complicated to implement (simple telnet use HTTP)
+4. Not ideal for all use cases - (microservices)
+
+
+Reference:
+https://www.youtube.com/watch?v=2Nt-ZrNP22A&list=PLQnljOFTspQUGjfGdg8UvL3D_K9ACL6Qh
+https://youtu.be/8ARodQ4Wlf4
